@@ -98,8 +98,6 @@
 				"aaron-bond.better-comments",
 				// Improve highlighting of errors, warnings and other language diagnostics.
 				"usernamehw.errorlens",
-				// Spell checker for VSCode
-				"streetsidesoftware.code-spell-checker",
 				// Tailwind CSS IntelliSense
 				"bradlc.vscode-tailwindcss"
 			]
