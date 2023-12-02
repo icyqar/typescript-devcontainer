@@ -26,12 +26,13 @@ RUN apt-get install sudo -y > /dev/null
 RUN npm install -g prettier > /dev/null
 
 # Install PostgreSQL
-RUN apt-get install postgresql postgresql-client -y > /dev/null
+RUN apt-get install postgresql postgresql-client postgresql-contrib -y > /dev/null
 
 # Enable the systemd service for PostgreSQL
 RUN systemctl enable postgresql
 
-RUN sudo -u postgres psql 
+# Start the PostgreSQL service
+RUN service postgresql start
 
 # Create a PostgreSQL database for development
 # devcontainer is the name of the user
