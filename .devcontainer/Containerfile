@@ -31,6 +31,8 @@ RUN apt-get install postgresql postgresql-client -y > /dev/null
 # Enable the systemd service for PostgreSQL
 RUN systemctl enable postgresql
 
+RUN sudo -u postgres psql 
+
 # Create a PostgreSQL database for development
 # devcontainer is the name of the user
 RUN sudo -u postgres createuser devcontainer
