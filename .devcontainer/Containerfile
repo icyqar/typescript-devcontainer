@@ -34,6 +34,9 @@ RUN systemctl enable postgresql
 # Start the PostgreSQL service
 RUN service postgresql start
 
+# Wait for the PostgreSQL service to start in an intelligent way
+RUN while ! pg_isready -h localhost -p 5432 > /dev/null; do sleep 1; done
+
 # Create a PostgreSQL database for development
 # devcontainer is the name of the user
 RUN sudo -u postgres createuser devcontainer
