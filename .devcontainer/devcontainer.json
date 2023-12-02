@@ -29,6 +29,9 @@
 				// Uses all ancestor .gitignore files
 				"search.useParentIgnoreFiles": true,
 
+				// Enable git autofetch
+				"git.autofetch": true,
+
 				// Enable word wrapping
 				"editor.wordWrap": "on",
 
@@ -76,7 +79,17 @@
 				// Needed to enable TOML support in VSCode
 				"tamasfe.even-better-toml",
 				// Rainbow CSV to colorize CSV files
-				"mechatroner.rainbow-csv"
+				"mechatroner.rainbow-csv",
+				// Generate types for programming languages from JSON and more
+				"quicktype.quicktype",
+				// Supercharges Git in VSCode
+				"eamodio.gitlens",
+				// Allow more human-friendly comments to be created
+				"aaron-bond.better-comments",
+				// Improve highlighting of errors, warnings and other language diagnostics.
+				"usernamehw.errorlens",
+				// Spell checker for VSCode
+				"streetsidesoftware.code-spell-checker"
 			]
 		}
 	}
