@@ -27,7 +27,7 @@ RUN apt-get install postgresql postgresql-client -y > /dev/null
 
 # Create a PostgreSQL database for development
 # devcontainer is the password
-RUN sudo -u sudo -u postgres psql -c "ALTER USER devcontainer PASSWORD 'devcontainer';"
+RUN sudo -u postgres psql -c "ALTER USER devcontainer PASSWORD 'devcontainer';"
 # devcontainer is the name of the user
 RUN sudo -u postgres createuser devcontainer
 # devcontainer is the name of the database
