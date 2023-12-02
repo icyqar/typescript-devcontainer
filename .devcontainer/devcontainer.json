@@ -58,7 +58,7 @@
 				},
 
 				// Typescript/Javascript language settings
-				"[javascript][typescript]": {
+				"[javascript][javascriptreact][typescript][typescriptreact]": {
 					// Use prettier to format javascript
 					"editor.defaultFormatter": "esbenp.prettier-vscode"
 				},
