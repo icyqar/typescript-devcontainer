@@ -32,12 +32,12 @@ RUN apt-get install postgresql postgresql-client -y > /dev/null
 RUN systemctl enable postgresql
 
 # Create a PostgreSQL database for development
-# devcontainer is the password
-RUN sudo -u postgres psql -c "ALTER USER devcontainer PASSWORD 'devcontainer';"
 # devcontainer is the name of the user
 RUN sudo -u postgres createuser devcontainer
 # devcontainer is the name of the database
 RUN sudo -u postgres createdb devcontainer
+# devcontainer is the password
+RUN sudo -u postgres psql -c "ALTER USER devcontainer PASSWORD 'devcontainer';"
 
 # Name of the user within the container
 ENV USER devcontainer
