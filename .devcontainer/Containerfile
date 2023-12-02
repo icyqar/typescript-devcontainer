@@ -22,6 +22,17 @@ RUN apt-get install sudo -y > /dev/null
 # Install the prettier npm package globally
 RUN npm install -g prettier > /dev/null
 
+# Install PostgreSQL
+RUN apt-get install postgresql postgresql-client -y > /dev/null
+
+# Create a PostgreSQL database for development
+# devcontainer is the password
+RUN sudo -u sudo -u postgres psql -c "ALTER USER devcontainer PASSWORD 'devcontainer';"
+# devcontainer is the name of the user
+RUN sudo -u postgres createuser devcontainer
+# devcontainer is the name of the database
+RUN sudo -u postgres createdb devcontainer
+
 # Name of the user within the container
 ENV USER devcontainer
 
