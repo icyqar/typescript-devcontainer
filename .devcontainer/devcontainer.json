@@ -47,6 +47,16 @@
 				// Disable telemtry for AWS Toolkit
 				"aws.telemetry": false,
 
+				"files.associations": {
+					// Tells VS Code to open .css files in Tailwind CSS mode
+					"*.css": "tailwindcss"
+				},
+
+				"editor.quickSuggestions": {
+					// Enable suggestions when editing strings
+					"strings": "on"
+				},
+
 				// Typescript/Javascript language settings
 				"[javascript][typescript]": {
 					// Use prettier to format javascript
@@ -89,7 +99,9 @@
 				// Improve highlighting of errors, warnings and other language diagnostics.
 				"usernamehw.errorlens",
 				// Spell checker for VSCode
-				"streetsidesoftware.code-spell-checker"
+				"streetsidesoftware.code-spell-checker",
+				// Tailwind CSS IntelliSense
+				"bradlc.vscode-tailwindcss"
 			]
 		}
 	}
