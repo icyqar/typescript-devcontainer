@@ -13,7 +13,7 @@
 
 	// Match the UID/GUID of the container's user with the host's user
 	// Needed to avoid permission issues
-	"updateRemoteUserUID": true,
+	// "updateRemoteUserUID": true,
 
 	// Capabilities to add to the container
 	"capAdd": [
