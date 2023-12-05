@@ -6,6 +6,20 @@
 	"build": {
 		"dockerfile": "Containerfile"
 	},
+
+	// Name of the user to use in the container
+	"containerUser": "devcontainer",
+
+	// Match the UID/GUID of the container's user with the host's user
+	// Needed to avoid permission issues
+	"updateRemoteUserUID": true,
+
+	// Capabilities to add to the container
+	"capAdd": [
+		// Allows container to ping other machines
+		"NET_RAW"
+	],
+
 	// Run the command to execute startup commands
 	"customizations": {
 		"vscode": {
