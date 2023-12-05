@@ -11,9 +11,6 @@
 		"vscode": {
 			//Settings for VSCode
 			"settings": {
-				// Set the default maximum timeout of lambda functions to 10 seconds
-				"aws.samcli.lambdaTimeout": 10000,
-
 				// Needed for ESLint to work correctly in monorepos with multiple eslint configs
 				"eslint.workingDirectories": [{ "mode": "auto" }],
 
@@ -44,9 +41,6 @@
 				// Disable telemetry for VSCode
 				"telemetry.telemetryLevel": "off",
 
-				// Disable telemtry for AWS Toolkit
-				"aws.telemetry": false,
-
 				"files.associations": {
 					// Tells VS Code to open .css files in Tailwind CSS mode
 					"*.css": "tailwindcss"
@@ -70,8 +64,7 @@
 				}
 			},
 			"extensions": [
-				// AWS Toolkit include's Amazon alternative to Copilot which is free
-				"AmazonWebServices.aws-toolkit-vscode",
+	
 				// Github Copilot for AI assisted development
 				"Github.copilot",
 				// dotenv(".env") language support
