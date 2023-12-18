@@ -99,7 +99,11 @@
 				// Improve highlighting of errors, warnings and other language diagnostics.
 				"usernamehw.errorlens",
 				// Tailwind CSS IntelliSense
-				"bradlc.vscode-tailwindcss"
+				"bradlc.vscode-tailwindcss",
+				// VSCode ESLint Extension
+				"dbaeumer.vscode-eslint",
+				// Visual Studio IntelliCode
+				"visualstudioexptteam.vscodeintellicode"
 			]
 		}
 	}
