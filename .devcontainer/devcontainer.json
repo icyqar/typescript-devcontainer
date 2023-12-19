@@ -31,7 +31,7 @@
 				"explorer.excludeGitIgnore": true,
 
 				// Uses all ancestor .gitignore files
-				"search.useParentIgnoreFiles": true,
+				// "search.useParentIgnoreFiles": true,
 
 				// Enable git autofetch
 				"git.autofetch": true,
