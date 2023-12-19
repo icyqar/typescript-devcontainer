@@ -19,6 +19,9 @@ RUN apt-get install git -y > /dev/null
 # Install systemctl 
 RUN apt-get install systemd -y > /dev/null
 
+# Install fish 
+RUN apt-get install fish -y > /dev/null
+
 # Install sudo
 RUN apt-get install sudo -y > /dev/null
 

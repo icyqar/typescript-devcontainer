@@ -24,8 +24,8 @@
 				// Disable VSCode minimap
 				"editor.minimap.enabled": false,
 
-				//Use bash as the default shell on Linux
-				"terminal.integrated.defaultProfile.linux": "bash",
+				//Use fish as the default shell on Linux
+				"terminal.integrated.defaultProfile.linux": "fish",
 
 				// HIde files ignored by git
 				"explorer.excludeGitIgnore": true,
