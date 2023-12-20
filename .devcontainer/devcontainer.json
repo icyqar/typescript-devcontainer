@@ -24,7 +24,7 @@
 				// Disable VSCode minimap
 				"editor.minimap.enabled": false,
 
-				//Use fish as the default shell on Linux
+				// Use fish as the default shell on Linux
 				"terminal.integrated.defaultProfile.linux": "fish",
 
 				// HIde files ignored by git
@@ -51,6 +51,14 @@
 				"files.associations": {
 					// Tells VS Code to open .css files in Tailwind CSS mode
 					"*.css": "tailwindcss"
+				},
+
+				// Enable file nesting
+				"explorer.fileNesting.enabled": true,
+
+				// Place all config files under package.json
+				"explorer.fileNesting.patterns": {
+					"package.json": "tsconfig.*.json, *.config.js, *.config.ts, package*.json",
 				},
 
 				"editor.quickSuggestions": {
