@@ -61,9 +61,6 @@
 					"package.json": "tsconfig*.json, *.config.js, *.config.ts, package*.json",
 				},
 
-				// 
-				"explorer.sortOrder": "modified",
-
 				"editor.quickSuggestions": {
 					// Enable suggestions when editing strings
 					"strings": "on"
