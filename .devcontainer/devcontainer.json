@@ -58,8 +58,11 @@
 
 				// Place all config files under package.json
 				"explorer.fileNesting.patterns": {
-					"package.json": "tsconfig.*.json, *.config.js, *.config.ts, package*.json",
+					"package.json": "tsconfig*.json, *.config.js, *.config.ts, package*.json",
 				},
+
+				// 
+				"explorer.sortOrder": "modified",
 
 				"editor.quickSuggestions": {
 					// Enable suggestions when editing strings
