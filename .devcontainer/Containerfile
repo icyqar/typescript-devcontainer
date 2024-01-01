@@ -13,19 +13,22 @@ RUN apt-get update > /dev/null
 RUN apt-get install nodejs -y > /dev/null
 RUN apt-get install npm -y > /dev/null
 
+# Install curl. Needed to install nvm
+RUN apt-get install curl -y > /dev/null
+
+# Install the fish shell
+RUN apt-get install fish -y > /dev/null
+
 # Install Git 
 RUN apt-get install git -y > /dev/null
 
 # Install systemctl 
 RUN apt-get install systemd -y > /dev/null
 
-# Install fish 
-RUN apt-get install fish -y > /dev/null
-
 # Install sudo
 RUN apt-get install sudo -y > /dev/null
 
-# Install the prettier npm package globally
+# Install prettier globally
 RUN npm install -g prettier > /dev/null
 
 # Name of the user within the container
@@ -53,8 +56,26 @@ RUN adduser "${USER}" sudo > /dev/null
 USER "${USER}"
 WORKDIR "/home/${USER}"
 
-# Disable NextJS telemetry
-ENV NEXT_TELEMETRY_DISABLED=1
+# Create the XDG_BIN_HOME directory
+ENV XDG_BIN_HOME="/home/${USER}/.local/bin"
+RUN mkdir -p "${XDG_BIN_HOME}"
 
 # Add the user's bin directory to the PATH
-ENV PATH="${PATH}:/home/${USER}/.local/bin"
+ENV PATH="${PATH}:/${XDG_BIN_HOME}"
+
+# Install fisher for this user
+RUN fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
+
+# Install starship for the fish and bash shells 
+RUN curl -sS https://starship.rs/install.sh | sh -s -- \
+    --yes --bin-dir "${XDG_BIN_HOME}"
+# Bash
+RUN echo 'eval "$(starship init bash)"' | tee -a "${HOME}/.bashrc"
+# Fish
+RUN echo 'starship init fish | source' | tee -a "${HOME}/.config/fish/config.fish"
+
+# Set the EDITOR variable to use VSCode
+ENV EDITOR=code
+
+# Disable NextJS telemetry
+ENV NEXT_TELEMETRY_DISABLED=1

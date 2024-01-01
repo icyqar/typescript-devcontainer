@@ -6,7 +6,12 @@
 	"build": {
 		"dockerfile": "Containerfile"
 	},
-
+	"runArgs": [
+		// Requires Podman not Docker
+		// Shares host UID with container user
+		// Allows the container user to access the project files stored amd owned by the host
+		"--userns=keep-id"
+	],
 	// Capabilities to add to the container
 	"capAdd": [
 		// Allows container to ping other machines
@@ -58,7 +63,7 @@
 
 				// Place all config files under package.json
 				"explorer.fileNesting.patterns": {
-					"package.json": "tsconfig*.json, *.config.js, *.config.ts, package*.json",
+					"package.json": "tsconfig*.json, *.config.js, *.config.ts, package*.json"
 				},
 
 				"editor.quickSuggestions": {
@@ -79,7 +84,6 @@
 				}
 			},
 			"extensions": [
-	
 				// Github Copilot for AI assisted development
 				"Github.copilot",
 				// dotenv(".env") language support
