@@ -75,7 +75,7 @@ RUN echo 'eval "$(starship init bash)"' | tee -a "${HOME}/.bashrc"
 RUN echo 'starship init fish | source' | tee -a "${HOME}/.config/fish/config.fish"
 
 # Set the EDITOR variable to use VSCode
-ENV EDITOR=code
+ENV EDITOR="code --wait"
 
 # Disable NextJS telemetry
 ENV NEXT_TELEMETRY_DISABLED=1
