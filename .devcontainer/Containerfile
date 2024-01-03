@@ -79,3 +79,6 @@ ENV EDITOR="code --wait"
 
 # Disable NextJS telemetry
 ENV NEXT_TELEMETRY_DISABLED=1
+
+# Disable Storybook telemetry
+ENV variableSTORYBOOK_DISABLE_TELEMETRY=1
