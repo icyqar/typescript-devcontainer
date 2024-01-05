@@ -42,7 +42,7 @@ jobs:
         run: |
           devcontainer build \
             --workspace-folder . \
-            --image-name "${REGISTRY_URL}/${REGISTRY_USERNAME}/${IMAGE_NAME}:0.0.2" \
+            --image-name "${REGISTRY_URL}/${REGISTRY_USERNAME}/${IMAGE_NAME}:0.0.3" \
             --platform linux/arm64,linux/amd64 \
             --push
         env:
